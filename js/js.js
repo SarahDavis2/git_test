@@ -39,3 +39,19 @@ function Book(title, author, pages, read) {
 }
 
 const book = new Book("The Hobbit", "J.K.K Tolkien", 295, "not read yet");
+
+const module = (() => {
+    console.log("module says");
+
+    const test = () => {
+        console.log("test");
+    }
+    return {
+        test,
+    }
+})();
+
+const start = (() => {
+    console.log("start");
+    module.test();
+})();
